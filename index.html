@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>معرض اللؤلؤة للسيارات</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-shapes"></div>
+
+    <div class="glass-container no-print">
+      <header>
+        <h1><i class="fa-solid fa-car"></i> نظام إدارة معرض اللؤلؤة</h1>
+        <nav class="tabs">
+          <button class="tab-btn active" onclick="openTab('add-tab')">
+            <i class="fa-solid fa-plus"></i> إضافة
+          </button>
+          <button class="tab-btn" onclick="openTab('list-tab')">
+            <i class="fa-solid fa-file-invoice"></i> المعاملات
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <div id="add-tab" class="tab-content active">
+          <div class="center-content">
+            <button class="btn-primary 3d-btn" onclick="openFormModal()">
+              <i class="fa-solid fa-file-circle-plus"></i> إنشاء معاملة جديدة
+            </button>
+          </div>
+        </div>
+
+        <div id="list-tab" class="tab-content">
+          <div class="search-box 3d-input-group">
+            <i class="fa-solid fa-search"></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="ابحث عن اسم المالك (من أول حرف)..."
+              onkeyup="searchTransactions()"
+            />
+          </div>
+          <div id="transactionsList" class="transactions-grid"></div>
+        </div>
+      </main>
+    </div>
+
+    <div id="formModal" class="modal">
+      <div class="modal-content glass-form">
+        <span class="close-btn no-print" onclick="closeFormModal()"
+          >&times;</span
+        >
+        <div class="form-actions no-print">
+          <button class="btn-success 3d-btn" onclick="saveTransaction()">
+            <i class="fa-solid fa-save"></i> حفظ الاستمارة
+          </button>
+          <button class="btn-info 3d-btn" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> طباعة
+          </button>
+        </div>
+
+        <div class="contract-paper" id="contractForm">
+          <img
+            src="https://j.top4top.io/p_3764yvipl1.jpeg"
+            class="center-watermark"
+            alt="watermark"
+          />
+          <div class="contract-header">
+            <img
+              src="https://d.top4top.io/p_376420z111.jpeg"
+              class="header-car-img"
+              style="transform: scaleX(-1)"
+              alt="car"
+            />
+            <div class="header-center">
+              <h2>معرض اللؤلؤه وشركه سجاد محمد جاسم</h2>
+              <p class="subtitle">لبيع واستيراد السيارات الحديثة</p>
+            </div>
+            <img
+              src="https://d.top4top.io/p_376420z111.jpeg"
+              class="header-car-img"
+              alt="car"
+            />
+          </div>
+          <div class="header-bottom-info">
+            <div class="info-right">
+              <p>رقم الاجازة (٢٢١٨)</p>
+              <p>بابل /الشوملي /الشارع العام قرب السيطرة</p>
+            </div>
+            <div class="info-left text-left">
+              <p>07734318510</p>
+              <p>07733694791</p>
+            </div>
+          </div>
+
+          <div class="contract-body">
+            <input type="hidden" id="transactionId" />
+            <div class="parties-section">
+              <div class="party-box">
+                <div class="input-row">
+                  <label>اسم المالك:</label><input type="text" id="ownerName" />
+                </div>
+                <div class="input-row">
+                  <label>الطرف الأول (البائع):</label
+                  ><input type="text" id="sellerName" />
+                </div>
+                <div class="input-row">
+                  <label>العنوان:</label
+                  ><input type="text" id="sellerAddress" />
+                </div>
+                <div class="input-row">
+                  <label>المهنة:</label><input type="text" id="sellerJob" />
+                </div>
+                <div class="input-row">
+                  <label>موبايل:</label><input type="text" id="sellerPhone" />
+                </div>
+                <div class="input-row">
+                  <label>رقم الهوية:</label><input type="text" id="sellerId" />
+                </div>
+              </div>
+
+              <div class="party-box">
+                <div class="input-row">
+                  <label>الطرف الثاني (المشتري):</label
+                  ><input type="text" id="buyerName" />
+                </div>
+                <div class="input-row">
+                  <label>العنوان:</label><input type="text" id="buyerAddress" />
+                </div>
+                <div class="input-row">
+                  <label>المهنة:</label><input type="text" id="buyerJob" />
+                </div>
+                <div class="input-row">
+                  <label>موبايل:</label><input type="text" id="buyerPhone" />
+                </div>
+                <div class="input-row">
+                  <label>رقم الهوية:</label><input type="text" id="buyerId" />
+                </div>
+              </div>
+            </div>
+
+            <div class="divider-title">
+              عقد بيع قطعي بين الطرفين حسب ما يأتي
+            </div>
+
+            <div class="car-details-section">
+              <p>
+                باع الطرف الأول للطرف الثاني السيارة المرقمة:
+                <input
+                  type="text"
+                  id="carNumber"
+                  class="inline-input long-input"
+                />
+              </p>
+              <div class="inline-row">
+                <span
+                  >نوعها: <input type="text" id="carType" class="inline-input"
+                /></span>
+                <span
+                  >موديل: <input type="text" id="carModel" class="inline-input"
+                /></span>
+                <span
+                  >لونها: <input type="text" id="carColor" class="inline-input"
+                /></span>
+              </div>
+              <div class="inline-row">
+                <span
+                  >رقم محركها:
+                  <input type="text" id="engineNo" class="inline-input"
+                /></span>
+                <span
+                  >رقم الشاصي:
+                  <input type="text" id="chassisNo" class="inline-input"
+                /></span>
+              </div>
+              <p>
+                ببدل قدره:
+                <input
+                  type="text"
+                  id="priceText"
+                  class="inline-input long-input"
+                />
+              </p>
+              <p>
+                وقد قبض البائع مبلغ وقدره:
+                <input
+                  type="text"
+                  id="receivedAmount"
+                  class="inline-input long-input"
+                />
+              </p>
+              <p>
+                والباقي:
+                <input
+                  type="text"
+                  id="remainingAmount"
+                  class="inline-input long-input"
+                />
+              </p>
+              <p>
+                الملاحظات:
+                <input type="text" id="notes" class="inline-input long-input" />
+              </p>
+            </div>
+
+            <div class="terms-box">
+              <ol>
+                <li>
+                  اذا كان البائع غير مالك للسيارة يتعهد باحضار صاحب السنوية
+                  لدائرة المرور للاعتراف بالبيع.
+                </li>
+                <li>
+                  يتعهد الطرفان بتسجيل السيارة في دائرة المرور والالتزام
+                  بالقرارات الصادرة.
+                </li>
+                <li>
+                  لقد اطلع المشتري على السيارة المتفق عليها وقبلها على كل عيب.
+                </li>
+                <li>
+                  اذا نكل احد الطرفين يدفع الناكل للطرف الآخر ضمانات (20%) عشرون
+                  بالمائة.
+                </li>
+                <li>
+                  الضريبة على البائع والمشتري كل على انفراد او حسب القرارات
+                  الجديدة.
+                </li>
+              </ol>
+              <div class="terms-footer">
+                <span>المعرض وسيط وليس كفيل</span>
+              </div>
+            </div>
+
+            <div class="signatures-section">
+              <p class="red-text">
+                نظمت هذه الاتفاقية بتاريخ
+                <input type="date" id="contractDate" class="inline-input" /> /
+                استلم السيارة المشتري في الساعة
+                <input type="time" id="contractTime" class="inline-input" />
+              </p>
+              <div class="signatures-row">
+                <div>البائع (التوقيع)</div>
+                <div>المشتري (التوقيع)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
