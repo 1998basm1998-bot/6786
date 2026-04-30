@@ -144,5 +144,5 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
     .glass-container { display: none !important; }
     .modal { position: static; display: block; background: transparent; padding: 0; overflow: visible;}
     .modal-content { max-width: 100%; margin: 0; padding: 0; background: transparent; border: none; box-shadow: none;}
-    .contract-paper { width: 210mm; min-height: 297mm; padding: 10mm 12mm; margin: 0; box-shadow: none; border: none; }
+    .contract-paper { width: 210mm; min-height: auto; height: 285mm; padding: 10mm 12mm; margin: 0; box-shadow: none; border: none; position: relative; overflow: hidden; page-break-inside: avoid; page-break-after: avoid; }
 }
