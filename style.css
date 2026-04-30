@@ -1,3 +1,4 @@
+/* style.css */
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +72,7 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
 
 /* الترويسة (الهيدر) */
 .c-header {
-    height: 150px; background: #111; border-radius: 12px; position: relative; margin-bottom: 15px; border: 2px solid #000; overflow: hidden;
+    height: 135px; background: #111; border-radius: 12px; position: relative; margin-bottom: 10px; border: 2px solid #000; overflow: hidden;
 }
 .ch-bg-shape {
     position: absolute; right: 0; top: 0; width: 35%; height: 100%;
@@ -79,61 +80,61 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); z-index: 1;
 }
 .ch-left { position: absolute; left: 0; top: 0; height: 100%; width: 250px; z-index: 2; }
-.car-beetle { position: absolute; left: -15px; top: -8px; width: 190px; transform: scaleX(-1); }
-.license-box { position: absolute; left: 15px; bottom: 8px; font-size: 11px; font-weight: 900; }
+.car-beetle { position: absolute; left: -15px; top: -8px; width: 170px; transform: scaleX(-1); }
+.license-box { position: absolute; left: 15px; bottom: 8px; font-size: 10px; font-weight: 900; }
 .lic-no { color: #fff; margin-bottom: 2px; }
 .lic-address { color: #ffeb3b; }
 
-.ch-center { position: absolute; width: 100%; text-align: center; top: 15px; z-index: 2; display: flex; flex-direction: column; align-items: center; }
-.title-main { color: #ffeb3b; font-size: 36px; font-weight: 900; margin: 0; text-shadow: 2px 2px 0 #000; line-height: 1; }
-.title-sub { color: #fff; font-size: 22px; font-weight: 900; margin: 5px 0 0; -webkit-text-stroke: 1px #d32f2f; text-shadow: 1px 1px 0 #d32f2f; }
-.title-sub2 { color: #fff; font-size: 24px; font-weight: 900; margin: 0; -webkit-text-stroke: 1.5px #d32f2f; text-shadow: 1px 1px 0 #d32f2f; }
-.title-badge { background: #ffeb3b; color: #000; padding: 2px 20px; border-radius: 20px; font-weight: 900; font-size: 14px; margin-top: 5px; border: 2px solid #fff; }
+.ch-center { position: absolute; width: 100%; text-align: center; top: 10px; z-index: 2; display: flex; flex-direction: column; align-items: center; }
+.title-main { color: #ffeb3b; font-size: 34px; font-weight: 900; margin: 0; text-shadow: 2px 2px 0 #000; line-height: 1; }
+.title-sub { color: #fff; font-size: 20px; font-weight: 900; margin: 2px 0 0; -webkit-text-stroke: 1px #d32f2f; text-shadow: 1px 1px 0 #d32f2f; }
+.title-sub2 { color: #fff; font-size: 22px; font-weight: 900; margin: 0; -webkit-text-stroke: 1.5px #d32f2f; text-shadow: 1px 1px 0 #d32f2f; }
+.title-badge { background: #ffeb3b; color: #000; padding: 2px 18px; border-radius: 20px; font-weight: 900; font-size: 13px; margin-top: 3px; border: 2px solid #fff; }
 
 .ch-right { position: absolute; right: 0; top: 0; height: 100%; width: 250px; z-index: 2; }
-.phones-box { position: absolute; right: 20px; top: 15px; text-align: right; color: white; font-weight: 900; font-size: 15px; line-height: 1.3; }
-.car-merc { position: absolute; right: 70px; top: 55px; width: 190px; }
+.phones-box { position: absolute; right: 20px; top: 10px; text-align: right; color: white; font-weight: 900; font-size: 14px; line-height: 1.2; }
+.car-merc { position: absolute; right: 70px; top: 45px; width: 170px; }
 
 /* بيانات الأطراف */
-.parties-wrapper { display: flex; gap: 15px; margin-bottom: 15px; }
-.party-box { flex: 1; border: 2px solid #d32f2f; border-radius: 12px; padding: 10px 15px; background: transparent; }
-.p-row { display: flex; align-items: flex-end; margin-bottom: 6px; }
+.parties-wrapper { display: flex; gap: 15px; margin-bottom: 10px; }
+.party-box { flex: 1; border: 2px solid #d32f2f; border-radius: 12px; padding: 8px 15px; background: transparent; }
+.p-row { display: flex; align-items: flex-end; margin-bottom: 5px; }
 .p-row label { color: #1565c0; font-weight: 900; font-size: 14px; width: 140px; }
 .p-row input { flex: 1; border-bottom: 2px dotted #1565c0; }
 
 /* شريط المنتصف */
-.middle-bar { display: flex; align-items: center; margin-bottom: 15px; }
-.serial { font-weight: 900; font-size: 18px; width: 180px; color: #333; display: flex; align-items: center;}
-.serial input { width: 80px; border-bottom: 1px solid #333; margin-right: 5px; font-size: 18px; }
-.ribbon { flex: 1; background: #f39c12; color: #d32f2f; text-align: center; font-weight: 900; font-size: 18px; padding: 5px; clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0 50%); }
+.middle-bar { display: flex; align-items: center; margin-bottom: 10px; }
+.serial { font-weight: 900; font-size: 16px; width: 180px; color: #333; display: flex; align-items: center;}
+.serial input { width: 80px; border-bottom: 1px solid #333; margin-right: 5px; font-size: 16px; }
+.ribbon { flex: 1; background: #f39c12; color: #d32f2f; text-align: center; font-weight: 900; font-size: 16px; padding: 4px; clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 15px 100%, 0 50%); }
 
 /* تفاصيل السيارة */
-.car-details { position: relative; padding: 10px 15px; margin-bottom: 15px; min-height: 220px; }
-.watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; opacity: 0.4; pointer-events: none; z-index: 0; }
-.cd-content { position: relative; z-index: 1; font-weight: 900; font-size: 14px; color: #111; }
-.d-row { display: flex; align-items: flex-end; margin-bottom: 12px; gap: 5px; }
+.car-details { position: relative; padding: 5px 15px; margin-bottom: 10px; min-height: 180px; }
+.watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 500px; opacity: 0.4; pointer-events: none; z-index: 0; }
+.cd-content { position: relative; z-index: 1; font-weight: 900; font-size: 13px; color: #111; }
+.d-row { display: flex; align-items: flex-end; margin-bottom: 8px; gap: 5px; }
 .d-label { white-space: nowrap; margin-left: 8px;}
-.cd-content input { border-bottom: 2px dotted #333; padding: 0 5px; }
+.cd-content input { border-bottom: 2px dotted #333; padding: 0 5px; font-size: 13px; }
 .flex-1 { flex: 1; }
 .w-120 { width: 120px; }
 
 /* الشروط والأحكام */
-.terms-box { border: 2px solid #d32f2f; border-radius: 12px; background: #fdfdf5; display: flex; flex-direction: column; position: relative; margin-bottom: 20px; }
-.tb-body { display: flex; padding: 10px 15px; }
+.terms-box { border: 2px solid #d32f2f; border-radius: 12px; background: #fdfdf5; display: flex; flex-direction: column; position: relative; margin-bottom: 10px; }
+.tb-body { display: flex; padding: 5px 15px; }
 .tb-left { width: 180px; display: flex; flex-direction: column; align-items: center; justify-content: space-between; position: relative;}
-.bottom-car { width: 170px; margin-bottom: 10px; z-index: 1;}
+.bottom-car { width: 170px; margin-bottom: 5px; z-index: 1;}
 .top-car { transform: scaleX(-1); }
 .waseet-badge { background: #ffeb3b; padding: 5px 10px; font-weight: 900; border: 1px solid #000; font-size: 13px; border-radius: 5px; color: #000; text-align: center; z-index: 2;}
 .tb-right { flex: 1; }
-.tb-right ol { margin-right: 20px; font-size: 12px; font-weight: 900; color: #1565c0; line-height: 1.8; }
-.tb-footer { background: #d32f2f; color: white; display: flex; justify-content: space-between; padding: 5px 20px; font-weight: bold; font-size: 13px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+.tb-right ol { margin-right: 20px; font-size: 11px; font-weight: 900; color: #1565c0; line-height: 1.5; margin-bottom: 5px; }
+.tb-footer { background: #d32f2f; color: white; display: flex; justify-content: space-between; padding: 4px 20px; font-weight: bold; font-size: 12px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
 
 /* التواقيع */
-.signatures { text-align: center; font-weight: 900; }
-.sig-date { color: #d32f2f; font-size: 15px; border-bottom: 1px solid #d32f2f; display: inline-block; padding-bottom: 5px; margin-bottom: 25px;}
+.signatures { text-align: center; font-weight: 900; margin-bottom: 5px; }
+.sig-date { color: #d32f2f; font-size: 14px; border-bottom: 1px solid #d32f2f; display: inline-block; padding-bottom: 2px; margin-bottom: 15px;}
 .sig-date input { border-bottom: 1px dashed #d32f2f; color: #d32f2f; }
 .w-30 { width: 30px; } .w-80 { width: 80px; }
-.sig-names { display: flex; justify-content: space-between; padding: 0 80px; font-size: 18px; color: #111; }
+.sig-names { display: flex; justify-content: space-between; padding: 0 80px; font-size: 16px; color: #111; }
 
 /* =========================================
    إعدادات الطباعة الدقيقة للحصول على ورقة مطابقة
@@ -145,5 +146,5 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
     .glass-container { display: none !important; }
     .modal { position: static; display: block; background: transparent; padding: 0; overflow: visible;}
     .modal-content { max-width: 100%; margin: 0; padding: 0; background: transparent; border: none; box-shadow: none;}
-    .contract-paper { width: 210mm; min-height: auto; height: 285mm; padding: 10mm 12mm; margin: 0; box-shadow: none; border: none; position: relative; overflow: hidden; page-break-inside: avoid; page-break-after: avoid; }
+    .contract-paper { width: 210mm; min-height: auto; height: auto; max-height: 297mm; padding: 10mm 12mm; margin: 0; box-shadow: none; border: none; position: relative; overflow: hidden; page-break-inside: avoid; page-break-after: avoid; }
 }
