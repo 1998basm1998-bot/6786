@@ -79,7 +79,7 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
     clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); z-index: 1;
 }
 .ch-left { position: absolute; left: 0; top: 0; height: 100%; width: 250px; z-index: 2; }
-.car-beetle { position: absolute; left: -10px; top: -5px; width: 160px; transform: scaleX(-1); }
+.car-beetle { position: absolute; left: -15px; top: -8px; width: 190px; transform: scaleX(-1); }
 .license-box { position: absolute; left: 15px; bottom: 8px; font-size: 11px; font-weight: 900; }
 .lic-no { color: #fff; margin-bottom: 2px; }
 .lic-address { color: #ffeb3b; }
@@ -92,7 +92,7 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
 
 .ch-right { position: absolute; right: 0; top: 0; height: 100%; width: 250px; z-index: 2; }
 .phones-box { position: absolute; right: 20px; top: 15px; text-align: right; color: white; font-weight: 900; font-size: 15px; line-height: 1.3; }
-.car-merc { position: absolute; right: 120px; top: 25px; width: 180px; }
+.car-merc { position: absolute; right: 70px; top: 25px; width: 170px; }
 
 /* بيانات الأطراف */
 .parties-wrapper { display: flex; gap: 15px; margin-bottom: 15px; }
