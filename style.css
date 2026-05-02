@@ -146,5 +146,26 @@ header { text-align: center; color: #111; margin-bottom: 20px; border-bottom: 2p
     .glass-container { display: none !important; }
     .modal { position: static; display: block; background: transparent; padding: 0; overflow: visible;}
     .modal-content { max-width: 100%; margin: 0; padding: 0; background: transparent; border: none; box-shadow: none;}
-    .contract-paper { width: 210mm; min-height: auto; height: auto; max-height: 297mm; padding: 10mm 12mm; margin: 0; box-shadow: none; border: none; position: relative; overflow: hidden; page-break-inside: avoid; page-break-after: avoid; }
+    .contract-paper { width: 210mm; min-height: auto; height: 297mm; padding: 5mm 10mm; margin: 0; box-shadow: none; border: none; position: relative; overflow: hidden; page-break-inside: avoid; page-break-after: avoid; }
+
+    /* تقليل المسافات لضمان طباعة الاستمارة في ورقة واحدة كاملة */
+    .c-header { height: 110px; margin-bottom: 5px; }
+    .ch-center { top: 5px; }
+    .title-main { font-size: 30px; }
+    .title-sub { font-size: 18px; }
+    .title-sub2 { font-size: 20px; }
+    .parties-wrapper { margin-bottom: 5px; }
+    .party-box { padding: 4px 10px; }
+    .p-row { margin-bottom: 3px; }
+    .middle-bar { margin-bottom: 5px; }
+    .car-details { margin-bottom: 5px; min-height: 140px; padding: 5px 10px; }
+    .d-row { margin-bottom: 4px; }
+    .terms-box { margin-bottom: 5px; }
+    .tb-body { padding: 5px 10px; }
+    .tb-right ol { margin-bottom: 2px; font-size: 10.5px; }
+    .signatures { margin-top: 5px; margin-bottom: 0px; }
+    .sig-date { margin-bottom: 8px; }
+    .phones-box { top: 5px; }
+    .car-merc { top: 35px; width: 150px; }
+    .car-beetle { width: 150px; }
 }
